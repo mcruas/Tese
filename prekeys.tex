@@ -1,0 +1,122 @@
+%%%
+%%% Misc.
+%%%
+
+\usecolour{true}
+
+
+%%%
+%%% Titulos
+%%%
+
+\author{Marcelo Castiel Ruas}
+\authorR{C. Ruas, Marcelo}
+
+\adviser{Alexandre Street de Aguiar}{Prof.}
+\adviserR{Street, Alexandre}
+% \coadviser{Marcelo Medeiros}{Prof.}
+% \coadviserR{Medeiros, Marcelo}
+% \coadviserInst{Departamento de Economia}{PUC-Rio}
+
+\title{Geração de Cenários de Geração de Energia Eólica utilizando um Framework não paramétrico de Alta Dimensão}
+
+\titleuk{Wind Power Scenario Generation Using a High Dimensional Nonparametric Framework}
+
+%% \subtitulo{Aqui vai o subtitulo caso precise}
+
+\day{20th}
+\month{February}
+\year{2018}
+
+\city{Rio de Janeiro}
+\CDD{000.00}
+\department{Engenharia Elétrica}
+\program{Engenharia Elétrica}
+\school{Centro Técnico Científico}
+\university{Pontifícia Universidade Católica do Rio de Janeiro}
+\uni{PUC-Rio}
+
+
+%%%
+%%% Jury
+%%%
+
+% \jury{%
+%   \jurymember{Juliano Junqueira Assunção}{Prof.}
+%     {Departamento de Economia}{PUC-Rio}
+%   \jurymember{Raphael Bottura Corbi}{Prof.}
+%     {Faculdade de Economia e Administração}{USP}
+%   \jurymember{Gabriel Lopes de Ulyssea}{Prof.}
+%     {Departamento de Economia}{PUC-Rio}
+%   \schoolhead{Sonia Maria Giacomini}{Prof.}
+% }
+
+
+%%%
+%%% Resume
+%%%
+
+\resume{%
+Graduated in Industrial Engineering at the Federal University
+of Rio Grande do Sul in 2011 and obtained his M.Sc. Degree in
+Economics from the Federal University of Rio Grande do Sul in 2014.}
+
+
+%%%
+%%% Acknowledgment
+%%%
+
+%\acknowledgment{%
+%  \noindent under contruction
+%  \bigskip
+%}
+
+
+%%%
+%%% Catalog prekeywords
+%%%
+
+\catalogprekeywords{%
+  \catalogprekey{Engenharia Elétrica}%
+}
+
+
+%%%
+%%% Keywords
+%%%
+%	Quantile Regression, Model Identification, Non-gaussian time series model
+
+
+\keywords{%
+  \key{Regressão Quantílica;}
+  \key{Identificação de Modelo;}
+  \key{Modelos de séries temporais não gaussianos;}
+  \key{Previsão;}
+}
+
+\keywordsuk{%
+  \key{Quantile Regression;}%
+  \key{Model Identification;}%
+  \key{Nongaussian time series model;}%
+  \key{Forecasting;}%
+}
+
+
+%%%
+%%% Abstract
+%%%
+
+\abstract{%
+Produzir previsões probabilísticas de Recursos Renováveis é um tópico e interesse em aplicações de Sistemas de Energia. Neste trabalho, foca-se em gerar cenários futuros de geração de energia eólica. A maior parte dos métodos de séries temporais utilizados para produzir tais previsões baseia-se na hipótese de erros gaussianos ou distribuição gaussiana; no entanto, as aplicações de interesse deste trabalho são séries temporais não gaussianas. Neste trabalho, desenvolve-se uma metodologia não paramétrica baseada em regressão quantílica para estimar a função de distribuição condicional de séries temporais mensais de produção de energia eólica. A distribuição condicional é formada conectando um vetor de quantis estimados conjuntamente. Dois modelos diferentes são utilizados para estimar os quantis: (i) o modelo Quantile Regularized Adaptive LASSO (QRAL) e (ii) o modelo Nonparametric Quantile Regression (NQR). O QRAL implementa dois tipos de regularização. Um é baseado no Adaptive LASSO para selecionar variáveis explicativas dentro de uma regressão quantílica. O outro enfatiza a conexão entre os diferentes quantis, refletindo o fato de que a função quantílica deve variar suavemente. O modelo NQR permite função não-linear das variáveis explicativas. Cara função não-linear é penalizada pela sua segunda derivada. Um estudo de caso com dados reais de produção de energia eólica compara os métodos propostos com outros métodos referência na literatura. O QRAL obteve uma performance melhor que esses outros métodos com relação a minimização do Erro Percentual Absoluto Médio dos cenários futuros em recuperar os quantis históricos mensais. O método NQR ainda está em desenvolvimento.
+}
+
+\abstractuk{%
+	Producing probabilistic forecasts of Renewable Generation is a topic of interest in power system applications. In this work, we focus on generating future scenarios of wind power generation.  Most time series methods used to produce such forecasts rely on the assumption of Gaussian errors or Gaussian distribution, however applications on power systems deals with nongaussian time series.  
+	We develop, in this work, a nonparametric methodology based on Quantile Regression to estimate the conditional distribution function for monthly wind time series.  
+	The conditional distribution is formed by connecting an array of quantiles jointly estimated. 
+	Two different models are used to estimate the quantiles: (i) the model Quantile Regularized Adaptive LASSO (QRAL) and (ii) the Nonparametric Quantile Regression (NQR) model.
+	The QRAL implements two types of regularization. One is based on the Adaptive LASSO for selecting covariates within each Quantile Regression. The other emphasizes the connection across different quantiles, reflecting the fact that the quantile function should have smooth variation,
+exploring the similarity of neighbor quantiles. The NQR model allows nonlinear functions of its covariates. Each nonlinear function is a continuous function penalized by its second derivative.
+	A case study with realistic Wind Power data from the Brazilian Northeast compares the  with different benchmarks in the literature. The QRAL was able to outperform them in terms of minimizing the Mean Absolute Percentile Error of future scenarios in recovering the historic monthly quantiles. The NQR method is under development.
+}
+

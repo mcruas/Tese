@@ -1,0 +1,70 @@
+%% -*- coding: utf-8; -*-
+
+% _ PRE-DOCUMENT _____________________________________________ %
+\documentclass[msc, american]{ThesisPUC}
+
+% packages
+\input{preamble}
+\usepackage{graphicx}
+\usepackage[flushleft]{threeparttable}
+% new commands
+\input{defs}
+\usepackage{amssymb,amsmath,amsfonts,color,amsbsy}
+\usepackage{graphicx}
+\usepackage{booktabs,caption}
+\usepackage{adjustbox}
+% \usepackage{subcaption}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+% \usepackage[retainorgcmds]{IEEEtrantools}
+% \usepackage{enumerate} % http://ctan.org/pkg/enumerate
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\h}{\mathcal{H}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Pn}{\mathbb{P}_n}
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\sgn}{\mathrm{sign}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\trace}{\mathrm{trace}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\x}{{\bs X}}
+\newcommand{\g}{\cellcolor{gray!25}}
+\newcommand{\gline}{\rowcolor{gray!25}}
+\newcommand*\rfrac[2]{{}_{#1}\backslash^{#2}}
+
+\DeclareMathOperator*{\Max}{max}
+\DeclareMathOperator*{\Min}{min}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\Maximize}{Maximize}
+
+
+
+
+% _ DOCUMENT _________________________________________________ %
+\input{prekeys}
+
+
+
+\begin{document}     
+
+
+\input{tese-introduction.tex}
+\input{tese-quantile-regression.tex}
+\input{tese-conditional-distribution}
+\input{tese-implementation.tex}
+\input{tese-case-studies.tex}
+
+
+
+  \arial
+  \bibliography{QR,Thesis,Bibhenriquinho}
+  \normalfont
+  \appendix
+
+\end{document}
