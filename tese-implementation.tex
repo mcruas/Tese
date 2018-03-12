@@ -21,7 +21,7 @@ The QRAL model, as described in problem (\ref{eq:adalasso_model_mat1})-(\ref{eq:
 	& \xi_{pj}^+, \xi_{pj}^- \geq 0, & \forall p\in P, \forall j \in J, \\
 	& D2_{pj}^+, D2_{pj}^- \geq 0, & \forall p\in P, \forall j \in J', \label{eq:adalasso-ult} 
 \end{align}
-where $J_{(-1)} = \{ 2, \dots, |J| \}$ is the set which contains all indexes but the first and $J'  = \{ 2, \dots, |J|-1 \}$ is the set which contains all indexes but the first and the last.
+where $J_{(-1)} = \{ 2, \dots, |J| \}$ is the set which contains all indices but the first and $J'  = \{ 2, \dots, |J|-1 \}$ is the set which contains all indices but the first and the last.
 Variables $\varepsilon^+_t$ and $\varepsilon^-_t$ represent the quantities $|y-q(\cdot)|^+$ and $|y-q(\cdot)|^-$, respectively. The first line on the objective function represents the sum of the check function over all $j$: $ \rho_{\alpha_j}(y-q(\cdot)) = \alpha_j \varepsilon^+_{tj} + (1-\alpha_j) \varepsilon^-_{tj}$. The constraint (\ref{eq:qral-crossing}) assures that the quantile function be monotonic by forcing that, for every $x_t$ and $\alpha_j$-quantile, $q_{\alpha_{j}}(x_t) \leq q_{\alpha_{j+1}}(x_t)$.
 The second derivative term $D^2_{\alpha_j}\beta_j$ is implemented on the optimization problem by adding a penalty on the objective function to penalize its absolute value, modeled as the sum of auxiliary variables $D2_{pj}^+ + D2_{pj}^-$. The tuning parameter $\gamma$ controls how rough the sequence $\{\beta_{pj}\}_{j \in J}$ can be, for a given $p$.
 
@@ -62,7 +62,7 @@ This function has the advantage of penalizing error proportionally to the quanti
 
 \section{Time-series Cross Validation} \label{sec:cv}
 
-Estimating the QRAL involves the use of parameters $\lambda$ and $\gamma$, which should be known \textit{a priori}. In statistics and machine learning, a popular technique is using Cross-validation (CV) to select the best set of parameters from the range of possibilities. How to select their values among this range is a crucial point in our methodology, as the estimated coefficients vary considerably with respect to parameter choice.
+Estimating the QRAL involves the use of parameters $\lambda$ and $\gamma$, which should be known \textit{a priori}. In statistics and machine learning, a popular technique is using cross-validation (CV) to select the best set of parameters from the range of possibilities. How to select their values among this range is a crucial point in our methodology, as the estimated coefficients vary considerably with respect to parameter choice.
 
 Out of the different possible implementations of CV, we use the $\mathcal{K}$-fold CV. It consists in first partitioning the dataset in $\mathcal{K}$ equally sized sets, which are the $\mathcal{K}$ folds. For each fold $k \in \{1,\dots,\mathcal{K}\}$, the remaining $\mathcal{K}-1$ folds are used to estimate the model using parameter $\theta$ (for the QRAL model, $\theta = [\gamma \quad \lambda]^T$) and predicting the values in fold $k$. The error function $MAPE^\alpha_\theta$ measures the result of this prediction.
 So, the CV error is given by the sum of all folds and all quantiles, for a given parameter $\theta$
@@ -74,7 +74,7 @@ The optimum parameter $\theta^*_{CV}$, according to this methodology, is the val
 \theta_{CV}^* = \argmin_\theta CV(\theta) .\label{eq:cv-equation}
 \end{equation}
 
-The usage of CV is not straightforward when data is dependent, which is the case of time series. As it is time dependent, one can be interested in using either all observations or to take the dependency away to do not interfere on the estimation. The works
+The usage of CV is not straightforward when data is dependent, which is the case of time series. As it is time dependent, one can be interested in using either all observations or to take the dependence away to do not interfere on the estimation. The works
 \cite{bergmeir_note_2017} and \cite{bergmeir_use_2012} deals specifically with the usage of CV in a time series context. They provide tests with both $\mathcal{K}$-fold CV and $\mathcal{K}$-fold with non-dependent data. Both schemes are shown of Figure \ref{fig:cross-validation-scheme}.
 \begin{figure}
 	\centering

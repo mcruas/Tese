@@ -6,7 +6,10 @@
 *.aux
 *.log
 *.toc
+*.lot
+*.lof
 
+Outros arquivos/*
 
 # Latexmk
 *.fdb_latexmk
@@ -27,3 +30,14 @@
 .vscode/settings.json
 main.pdf
 apresentacao-proposta.pdf
+.gitignore
+~$Projeto de Tese.pptx
+Projeto de Tese.pptx
+Projeto de Tese.pdf
+PPT 08-03-18.pptx
+PPT 08-03-18.pdf
+GGV - Proposta de Tese - Marcelo Ruas - 22-02-18.pdf
+bibliografia.pdf
+Images/Diagrama-trabalho.pdf
+Images/lassopath.png
+.gitignore
